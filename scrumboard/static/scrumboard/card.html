@@ -7,13 +7,16 @@
     data-ng-model-options="modelOptions">
     <div class="flex">
         <label><strong>Title:&nbsp;</strong></label>
-        <input type="text"
-               data-ng-model="card.title"
-               data-ng-change="update()" />
+        <label>
+            <input type="text"
+                   data-ng-model="card.title"
+                   data-ng-change="update()"/>
+        </label>
     </div>
     <textarea data-ng-model="card.description"
               data-ng-change="update()"
               placeholder="Enter description.."></textarea>
 
     <button data-ng-click="edit=false">Close</button>
+    <button data-ng-click="delete()">Delete Card</button>
 </div>
