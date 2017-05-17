@@ -1,4 +1,19 @@
-<div clas="card">
+<div class="card" data-ng-hide="edit" data-ng-click="edit=true">
     <h4>{{ card.title }}</h4>
     <span class="description">{{ card.description }}</span>
+</div>
+
+<div class ="card" data-ng-show="edit"
+    data-ng-model-options="modelOptions">
+    <div class="flex">
+        <label><strong>Title:&nbsp;</strong></label>
+        <input type="text"
+               data-ng-model="card.title"
+               data-ng-change="update()" />
+    </div>
+    <textarea data-ng-model="card.description"
+              data-ng-change="update()"
+              placeholder="Enter description.."></textarea>
+
+    <button data-ng-click="edit=false">Close</button>
 </div>
