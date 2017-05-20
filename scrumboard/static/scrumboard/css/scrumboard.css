@@ -7,14 +7,16 @@ html {
     overflow-x: scroll;
     white-space: normal;
     display: inline-table;
+    background-color: #404040;
+
 }
 .list {
-    width: 20%;
+    width: auto;
     float: left;
     border: 1px solid grey;
     padding: 7px;
     margin: 7px;
-    background-color: dimgray;
+    background-color: lightgray;
 }
 
 .list h3 {
