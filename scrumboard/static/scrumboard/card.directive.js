@@ -16,6 +16,12 @@
                         $scope.card
                     );
                 };
+                $scope.close = function () {
+                   $http.get(
+                       url,
+                       $scope.card
+                   );
+                };
                 $scope.delete = function () {
                     $http.delete(url).then(
                         function() {
@@ -27,6 +33,7 @@
                         }
                     );
                 };
+                //no longer used
                 $scope.modelOptions = {
                     debounce : 500
                 };

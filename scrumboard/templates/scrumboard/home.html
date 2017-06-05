@@ -9,7 +9,7 @@
     <body data-ng-app="scrumboard.demo" class="listContainer">
         {% verbatim %}
         <div data-ng-controller="ScrumboardController">
-            <div class="list" ng-repeat="list in data">
+            <div class="list" data-ng-repeat="list in data">
                 <h3>{{ list.name }}</h3>
                 <ul>
                     <li data-ng-repeat="card in list.cards">

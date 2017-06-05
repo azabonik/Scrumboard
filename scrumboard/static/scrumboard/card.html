@@ -9,14 +9,13 @@
         <label><strong>Title:&nbsp;</strong></label>
         <label>
             <input type="text"
-                   data-ng-model="card.title"
-                   data-ng-change="update()"/>
+                   data-ng-model="card.title"/>
         </label>
     </div>
     <textarea data-ng-model="card.description"
-              data-ng-change="update()"
               placeholder="Enter description.."></textarea>
 
-    <button data-ng-click="edit=false">Close</button>
+    <button data-ng-click="update(); edit=false">Save</button>
+    <button data-ng-click="close(); edit=false">Close</button>
     <button data-ng-click="delete()">Delete Card</button>
 </div>
