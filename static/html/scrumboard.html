@@ -1,0 +1,12 @@
+<div class="list" data-ng-repeat="list in data">
+    <h3>{{ list.name }}</h3>
+    <ul>
+        <li data-ng-repeat="card in list.cards">
+            <scrumboard-card></scrumboard-card>
+        </li>
+    </ul>
+    <div class="flex">
+        <input type="text" data-ng-model="new_title" />
+        <button data-ng-click="add(list, new_title)">+</button>
+    </div>
+</div>
