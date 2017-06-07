@@ -1,21 +1,38 @@
 <div class="card" data-ng-hide="edit" data-ng-click="edit=true">
     <h4>{{ card.title }}</h4>
-    <span class="description">{{ card.description }}</span>
+    <span class="story_points"><strong>Story Points:</strong> {{ card.story_points }}</span><br>
+    <span class="business_value"><strong>Business Value: </strong>{{ card.business_value }}</span><br>
+    <span class="description">{{ card.description }}</span><br>
+
 </div>
 
 <div class ="card" data-ng-show="edit"
     data-ng-model-options="modelOptions">
     <div class="flex">
         <label><strong>Title:&nbsp;</strong></label>
-        <label>
-            <input type="text"
-                   data-ng-model="card.title"/>
-        </label>
+        <input type="text"
+               data-ng-model="card.title"
+               data-ng-change="update()" />
     </div>
     <textarea data-ng-model="card.description"
-              placeholder="Enter description.."></textarea>
+              data-ng-change="update()"
+              placeholder="Enter description..">
+    </textarea>
+    <textarea data-ng-model="card.story_points"
+              data-ng-change="update()">
+    </textarea>
+    <textarea data-ng-model="card.business_value"
+              data-ng-change="update()">
+    </textarea>
 
-    <button data-ng-click="update(); edit=false">Save</button>
+    <div>
+        <label>List: </label>
+        <select ng-options="list as list.name for list in data"
+                ng-model="destList"></select>
+        <button ng-click="move()">Move</button>
+    </div>
+
+
     <button data-ng-click="close(); edit=false">Close</button>
     <button data-ng-click="delete()">Delete Card</button>
 </div>
