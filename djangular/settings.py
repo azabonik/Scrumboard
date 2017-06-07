@@ -25,7 +25,8 @@ SECRET_KEY = '4nh2&6s0f!0-dlyx5=806+0xbhujcvj@6v849ya(2b=67)u)70'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+# Allow all host headers
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -127,7 +128,4 @@ STATICFILES_DIRS = (
 )
 
 PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
-STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
-
-# Allow all host headers
-ALLOWED_HOSTS = ['*']
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
