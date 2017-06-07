@@ -1,7 +1,8 @@
 (function() {
     'use strict';
 
-    angular.module('scrumboard.demo')
+    angular
+        .module('scrumboard.demo')
         .config(['$routeProvider', config])
         .run(['$http', run]);
 
@@ -15,9 +16,9 @@
             .when('/login', {
                 templateUrl: '/static/html/login.html',
                 controller: 'LoginController'
-        })
-            .otherwise('/');
-    }
+            })
+            .otherwise('/')
+    };
 
     function run($http) {
         $http.defaults.xsrfHeaderName = 'X-CSRFToken';
