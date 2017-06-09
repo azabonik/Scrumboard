@@ -128,4 +128,4 @@ STATICFILES_DIRS = (
 )
 
 PROJECT_DIR = os.path.join(os.path.dirname(__file__), '..')
-STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
+STATIC_ROOT = os.path.join(PROJECT_DIR, 'staticfiles')
